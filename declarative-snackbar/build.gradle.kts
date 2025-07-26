@@ -97,35 +97,4 @@ mavenPublishing {
             developerConnection = "scm:git:ssh://git@github.com/AJIEKCX/DeclarativeSnackbar.git"
         }
     }
-
-    pom {
-        name.set(project.properties["POM_NAME"].toString())
-        description.set(project.description)
-        url.set("https://github.com/AJIEKCX/DeclarativeSnackbar")
-        issueManagement {
-            url.set("https://github.com/AJIEKCX/DeclarativeSnackbar/issues")
-        }
-
-        scm {
-            url.set("https://github.com/AJIEKCX/DeclarativeSnackbar")
-            connection.set("scm:git://github.com/AJIEKCX/DeclarativeSnackbar.git")
-            developerConnection.set("scm:git://github.com/AJIEKCX/DeclarativeSnackbar.git")
-        }
-
-        licenses {
-            license {
-                name.set("The Apache Software License, Version 2.0")
-                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                distribution.set("repo")
-            }
-        }
-
-        developers {
-            developer {
-                id.set("AJIEKCX")
-                name.set("Alexey Panov")
-                email.set("panovalexsey@gmail.com")
-            }
-        }
-    }
 }
