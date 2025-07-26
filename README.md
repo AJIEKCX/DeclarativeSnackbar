@@ -1,5 +1,11 @@
 # Declarative Snackbar
 
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.0-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
+
+![badge-android](http://img.shields.io/badge/platform-android-6EDB8D.svg?style=flat)
+![badge-ios](http://img.shields.io/badge/platform-ios-EAEAEA.svg?style=flat)
+![badge-jvm](https://img.shields.io/badge/platform-jvm-DB413D.svg?style=flat)
+
 A declarative API for Snackbars in Compose Multiplatform (Android, iOS, Desktop) that makes it easy to display and manage snackbar messages in your application.
 
 ## Features
@@ -10,7 +16,12 @@ A declarative API for Snackbars in Compose Multiplatform (Android, iOS, Desktop)
 - **Custom UI**: No dependency on the Material snackbar, you can provide any custom UI you want.  
 - **Custom animations**: Customize the enter and exit animations for your snackbars.
 
+Global and local | Custom content |
+| ---- | ---- |
+| <image src="https://github.com/user-attachments/assets/840c5bff-9a18-4447-aa6c-bd22e8e6e943"/>| <image src="https://github.com/user-attachments/assets/29bf8aae-bc2d-479e-bbaa-5dad116c84a8"/> |
+
 ## Installation
+
 
 Add the dependency to your app's build.gradle.kts file:
 
