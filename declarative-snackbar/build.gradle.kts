@@ -5,7 +5,8 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.compose.multiplatform)
-    id("com.vanniktech.maven.publish") version "0.34.0"
+    alias(libs.plugins.binary.compatibility.validator)
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
 group = "io.github.ajiekcx"
@@ -65,6 +66,12 @@ android {
     }
 }
 
+apiValidation {
+    @OptIn(kotlinx.validation.ExperimentalBCVApi::class)
+    klib {
+        enabled = true
+    }
+}
 
 mavenPublishing {
     publishToMavenCentral()

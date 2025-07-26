@@ -1,0 +1,135 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.ajiekcx:declarative-snackbar>
+abstract interface <#A: kotlin/Any?> io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent|null[0]
+    abstract val animationDuration // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.animationDuration|{}animationDuration[0]
+        abstract fun <get-animationDuration>(): kotlin.time/Duration // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.animationDuration.<get-animationDuration>|<get-animationDuration>(){}[0]
+    abstract val state // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.state|{}state[0]
+        abstract fun <get-state>(): kotlinx.coroutines.flow/StateFlow<io.github.ajiekcx.declarativeSnackbar.core/SnackbarState<#A>> // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.state.<get-state>|<get-state>(){}[0]
+
+    abstract fun hide() // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.hide|hide(){}[0]
+    abstract fun onDestroy() // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.onDestroy|onDestroy(){}[0]
+    abstract fun show(io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A>) // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent.show|show(io.github.ajiekcx.declarativeSnackbar.core.SnackbarContent<1:0>){}[0]
+}
+
+abstract interface <#A: kotlin/Any?> io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent|null[0]
+    abstract val content // io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent.content|{}content[0]
+        abstract fun <get-content>(): #A // io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent.content.<get-content>|<get-content>(){}[0]
+    abstract val duration // io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent.duration|{}duration[0]
+        abstract fun <get-duration>(): io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration // io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent.duration.<get-duration>|<get-duration>(){}[0]
+}
+
+sealed interface io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration|null[0]
+    abstract val timeInMillis // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.timeInMillis|{}timeInMillis[0]
+        abstract fun <get-timeInMillis>(): kotlin/Long // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.timeInMillis.<get-timeInMillis>|<get-timeInMillis>(){}[0]
+
+    final class Custom : io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom|null[0]
+        constructor <init>(kotlin/Long) // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.<init>|<init>(kotlin.Long){}[0]
+
+        final val timeInMillis // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.timeInMillis|{}timeInMillis[0]
+            final fun <get-timeInMillis>(): kotlin/Long // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.timeInMillis.<get-timeInMillis>|<get-timeInMillis>(){}[0]
+
+        final fun component1(): kotlin/Long // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.component1|component1(){}[0]
+        final fun copy(kotlin/Long = ...): io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.copy|copy(kotlin.Long){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Custom.toString|toString(){}[0]
+    }
+
+    final object Permanent : io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Permanent|null[0]
+        final val timeInMillis // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Permanent.timeInMillis|{}timeInMillis[0]
+            final fun <get-timeInMillis>(): kotlin/Long // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Permanent.timeInMillis.<get-timeInMillis>|<get-timeInMillis>(){}[0]
+
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Permanent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Permanent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Permanent.toString|toString(){}[0]
+    }
+
+    final object Short : io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Short|null[0]
+        final val timeInMillis // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Short.timeInMillis|{}timeInMillis[0]
+            final fun <get-timeInMillis>(): kotlin/Long // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Short.timeInMillis.<get-timeInMillis>|<get-timeInMillis>(){}[0]
+
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Short.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Short.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration.Short.toString|toString(){}[0]
+    }
+}
+
+final class <#A: kotlin/Any?> io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage : io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A> { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage|null[0]
+    constructor <init>(io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration, #A) // io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage.<init>|<init>(io.github.ajiekcx.declarativeSnackbar.core.SnackbarDuration;1:0){}[0]
+
+    final val content // io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage.content|{}content[0]
+        final fun <get-content>(): #A // io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage.content.<get-content>|<get-content>(){}[0]
+    final val duration // io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage.duration|{}duration[0]
+        final fun <get-duration>(): io.github.ajiekcx.declarativeSnackbar.core/SnackbarDuration // io.github.ajiekcx.declarativeSnackbar.core/SnackbarMessage.duration.<get-duration>|<get-duration>(){}[0]
+}
+
+sealed class <#A: kotlin/Any?> io.github.ajiekcx.declarativeSnackbar.core/SnackbarState { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState|null[0]
+    abstract val isVisible // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.isVisible|{}isVisible[0]
+        abstract fun <get-isVisible>(): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.isVisible.<get-isVisible>|<get-isVisible>(){}[0]
+
+    final class <#A1: kotlin/Any?> Hidden : io.github.ajiekcx.declarativeSnackbar.core/SnackbarState<#A1> { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden|null[0]
+        constructor <init>(io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1>?) // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.<init>|<init>(io.github.ajiekcx.declarativeSnackbar.core.SnackbarContent<1:0>?){}[0]
+
+        final val isVisible // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.isVisible|{}isVisible[0]
+            final fun <get-isVisible>(): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.isVisible.<get-isVisible>|<get-isVisible>(){}[0]
+        final val previousMessageContent // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.previousMessageContent|{}previousMessageContent[0]
+            final fun <get-previousMessageContent>(): io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1>? // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.previousMessageContent.<get-previousMessageContent>|<get-previousMessageContent>(){}[0]
+
+        final fun component1(): io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1>? // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.component1|component1(){}[0]
+        final fun copy(io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1>? = ...): io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden<#A1> // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.copy|copy(io.github.ajiekcx.declarativeSnackbar.core.SnackbarContent<1:0>?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Hidden.toString|toString(){}[0]
+    }
+
+    final class <#A1: kotlin/Any?> Shown : io.github.ajiekcx.declarativeSnackbar.core/SnackbarState<#A1> { // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown|null[0]
+        constructor <init>(io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1>) // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.<init>|<init>(io.github.ajiekcx.declarativeSnackbar.core.SnackbarContent<1:0>){}[0]
+
+        final val isVisible // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.isVisible|{}isVisible[0]
+            final fun <get-isVisible>(): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.isVisible.<get-isVisible>|<get-isVisible>(){}[0]
+        final val messageContent // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.messageContent|{}messageContent[0]
+            final fun <get-messageContent>(): io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1> // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.messageContent.<get-messageContent>|<get-messageContent>(){}[0]
+
+        final fun component1(): io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1> // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.component1|component1(){}[0]
+        final fun copy(io.github.ajiekcx.declarativeSnackbar.core/SnackbarContent<#A1> = ...): io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown<#A1> // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.copy|copy(io.github.ajiekcx.declarativeSnackbar.core.SnackbarContent<1:0>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.ajiekcx.declarativeSnackbar.core/SnackbarState.Shown.toString|toString(){}[0]
+    }
+}
+
+final object io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBoxDefaults { // io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBoxDefaults|null[0]
+    final fun animateAdditionalPadding(androidx.compose.ui/Alignment, androidx.compose.runtime/Composer?, kotlin/Int): androidx.compose.foundation.layout/PaddingValues // io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBoxDefaults.animateAdditionalPadding|animateAdditionalPadding(androidx.compose.ui.Alignment;androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+    final fun enterTransition(androidx.compose.ui/Alignment, kotlin.time/Duration): androidx.compose.animation/EnterTransition // io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBoxDefaults.enterTransition|enterTransition(androidx.compose.ui.Alignment;kotlin.time.Duration){}[0]
+    final fun exitTransition(androidx.compose.ui/Alignment, kotlin.time/Duration): androidx.compose.animation/ExitTransition // io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBoxDefaults.exitTransition|exitTransition(androidx.compose.ui.Alignment;kotlin.time.Duration){}[0]
+}
+
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_DefaultSnackbarComponent$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_DefaultSnackbarComponent$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_DefaultSnackbarComponent$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Custom$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Custom$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Custom$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Permanent$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Permanent$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Permanent$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Short$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Short$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Short$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarMessage$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarMessage$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarMessage$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarState$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Hidden$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Hidden$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Hidden$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Shown$stableprop // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Shown$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Shown$stableprop[0]
+final val io.github.ajiekcx.declarativeSnackbar.ui/io_github_ajiekcx_declarativeSnackbar_ui_SnackbarBoxDefaults$stableprop // io.github.ajiekcx.declarativeSnackbar.ui/io_github_ajiekcx_declarativeSnackbar_ui_SnackbarBoxDefaults$stableprop|#static{}io_github_ajiekcx_declarativeSnackbar_ui_SnackbarBoxDefaults$stableprop[0]
+
+final fun (androidx.compose.ui/Modifier).io.github.ajiekcx.declarativeSnackbar.ui/noOverlapBottomContentBySnackbar(): androidx.compose.ui/Modifier // io.github.ajiekcx.declarativeSnackbar.ui/noOverlapBottomContentBySnackbar|noOverlapBottomContentBySnackbar@androidx.compose.ui.Modifier(){}[0]
+final fun (androidx.compose.ui/Modifier).io.github.ajiekcx.declarativeSnackbar.ui/noOverlapTopContentBySnackbar(): androidx.compose.ui/Modifier // io.github.ajiekcx.declarativeSnackbar.ui/noOverlapTopContentBySnackbar|noOverlapTopContentBySnackbar@androidx.compose.ui.Modifier(){}[0]
+final fun <#A: kotlin/Any?> io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent(kotlin.time/Duration = ...): io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent<#A> // io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent|SnackbarComponent(kotlin.time.Duration){0§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBox(io.github.ajiekcx.declarativeSnackbar.core/SnackbarComponent<#A>, kotlin/Function3<#A, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.ui/Modifier?, androidx.compose.ui/Alignment?, androidx.compose.animation/EnterTransition?, androidx.compose.animation/ExitTransition?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // io.github.ajiekcx.declarativeSnackbar.ui/SnackbarBox|SnackbarBox(io.github.ajiekcx.declarativeSnackbar.core.SnackbarComponent<0:0>;kotlin.Function3<0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.ui.Modifier?;androidx.compose.ui.Alignment?;androidx.compose.animation.EnterTransition?;androidx.compose.animation.ExitTransition?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){0§<kotlin.Any?>}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_DefaultSnackbarComponent$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_DefaultSnackbarComponent$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_DefaultSnackbarComponent$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Custom$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Custom$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Custom$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Permanent$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Permanent$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Permanent$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Short$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Short$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarDuration_Short$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarMessage$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarMessage$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarMessage$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarState$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Hidden$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Hidden$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Hidden$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Shown$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.core/io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Shown$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_core_SnackbarState_Shown$stableprop_getter(){}[0]
+final fun io.github.ajiekcx.declarativeSnackbar.ui/io_github_ajiekcx_declarativeSnackbar_ui_SnackbarBoxDefaults$stableprop_getter(): kotlin/Int // io.github.ajiekcx.declarativeSnackbar.ui/io_github_ajiekcx_declarativeSnackbar_ui_SnackbarBoxDefaults$stableprop_getter|io_github_ajiekcx_declarativeSnackbar_ui_SnackbarBoxDefaults$stableprop_getter(){}[0]
