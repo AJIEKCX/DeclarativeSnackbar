@@ -27,8 +27,8 @@ Add the dependency to your app's build.gradle.kts file:
 
 ```kotlin
 dependencies {
-    implementation("io.github.ajiekcx:declarative-snackbar-compose:0.1.0") 
-    implementation("io.github.ajiekcx:declarative-snackbar-core:0.1.0") // Optional, for modules without compose dependency
+    implementation("io.github.ajiekcx:declarative-snackbar-compose:0.2.0") 
+    implementation("io.github.ajiekcx:declarative-snackbar-core:0.2.0") // Optional, for modules without compose dependency
 }
 ```
 
