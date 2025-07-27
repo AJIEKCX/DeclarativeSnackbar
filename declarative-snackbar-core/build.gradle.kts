@@ -3,14 +3,12 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.binary.compatibility.validator)
     alias(libs.plugins.vanniktech.maven.publish)
 }
 
 group = "io.github.ajiekcx"
-version = "0.1.0"
+version = "0.2.0"
 
 kotlin {
     explicitApi()
@@ -29,8 +27,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(compose.ui)
-            implementation(compose.foundation)
+            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }
@@ -60,10 +57,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
-    buildFeatures {
-        compose = true
-    }
 }
 
 apiValidation {
@@ -77,10 +70,10 @@ mavenPublishing {
     publishToMavenCentral()
     signAllPublications()
 
-    coordinates(group.toString(), "declarative-snackbar", version.toString())
+    coordinates(group.toString(), "declarative-snackbar-core", version.toString())
 
     pom {
-        name = "declarative-snackbar"
+        name = "declarative-snackbar-core"
         description = "A declarative API for Snackbars in Compose Multiplatform that makes it easy to display and manage snackbar messages in your application."
         inceptionYear = "2025"
         url = "https://github.com/AJIEKCX/DeclarativeSnackbar/"

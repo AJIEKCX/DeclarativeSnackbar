@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Declarative Snackbar"
 include(":android-sample")
-include(":declarative-snackbar")
+include(":declarative-snackbar-compose")
+include(":declarative-snackbar-core")
