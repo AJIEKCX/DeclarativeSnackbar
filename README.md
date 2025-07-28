@@ -38,6 +38,8 @@ dependencies {
 
 1. Create a global snackbar component:
 
+⚠️ For demonstration purposes only, use DI in real applications!
+
 ```kotlin
 object GlobalSnackbarComponent: SnackbarComponent<String> by SnackbarComponent()
 ```
