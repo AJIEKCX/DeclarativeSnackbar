@@ -57,7 +57,7 @@ SnackbarBox(
 }
 ```
 
-3. Show a snackbar message from anywhere in your app:
+3. Show a snackbar message from anywhere in your app (in the presentation layer — ViewModel, etc.):
 
 ```kotlin
 GlobalSnackbarComponent.show(
