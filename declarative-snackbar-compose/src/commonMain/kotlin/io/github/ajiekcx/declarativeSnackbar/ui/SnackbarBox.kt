@@ -46,8 +46,8 @@ public fun <T> SnackbarBox(
     content: @Composable () -> Unit,
 ) {
     val componentState by component.state.collectAsState()
-    val bottomMessengerOffset = remember { mutableStateMapOf<String, Int>() }
-    val topMessengerOffset = remember { mutableStateMapOf<String, Int>() }
+    val bottomMessengerOffset = LocalBottomMessengerOffset.current
+    val topMessengerOffset = LocalTopMessengerOffset.current
     CompositionLocalProvider(
         LocalBottomMessengerOffset provides bottomMessengerOffset,
         LocalTopMessengerOffset provides topMessengerOffset,
