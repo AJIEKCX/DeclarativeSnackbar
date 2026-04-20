@@ -37,7 +37,7 @@ kotlin {
 }
 
 android {
-    namespace = "io.github.ajiekcx.declarativeSnackbar"
+    namespace = "io.github.ajiekcx.declarativeSnackbar.compose"
     compileSdk = 35
 
     defaultConfig {
